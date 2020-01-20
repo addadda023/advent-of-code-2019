@@ -12,13 +12,13 @@ def calculate_fuel(m):
 
 
 fuel = sum(calculate_fuel(m) for m in mass)
+assert fuel == 3231195
 print(fuel)
 
 
 def calculate_complete_fuel(m):
     # Part 2
     # Fuel needs its own fuel
-
     t_fuel = 0
     while m > 0:
         cur_fuel = calculate_fuel(m)
@@ -30,4 +30,5 @@ def calculate_complete_fuel(m):
 
 
 total_fuel = sum(calculate_complete_fuel(m) for m in mass)
+assert total_fuel == 4843929
 print(total_fuel)
